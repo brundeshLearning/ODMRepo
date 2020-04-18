@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="HLRuleSet" usingRuleflow="true" ruleflowName="HLRuleFlow" targetRuleProjectName="HomeLoanRuleProject">
+  <name>HLRuleSet</name>
+  <uuid>bb9028e6-1a89-4750-94f0-7e34ceeb8ef6</uuid>
+  <referencedVariables variableName="homeLoan" variableSetName="HLVariableSet" direction="IN_OUT">
+    <variableSet href="../rules/HLVariableSet.var#8902eb19-8aaa-4760-92d1-0e4b52fb0c04"/>
+  </referencedVariables>
+  <ruleflow href="../rules/HLRuleFlow.rfl#6b53866b-f45e-40cb-aa72-1513d605f04c"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="HLRuleSet_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../HomeLoanRuleProject#59efef33-61dd-4f66-8f0e-77775cc005ce"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>DetermineHLEligibility</name>
+  <uuid>2b9348ba-208e-4764-a79a-b298168ef07e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	 all of the following conditions are true : 
+		- the cibil score of 'HOME LOAN' is more than 700 
+		- the requested loan amount of 'HOME LOAN' is less than 100000 		
+		- 'HOME LOAN' is existing loan is not true 
+ 
+then 
+ 	set the approved loan amount of 'HOME LOAN' to the requested loan amount of 'HOME LOAN' ; 
+ 	make it true that 'HOME LOAN' is loan approved ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
