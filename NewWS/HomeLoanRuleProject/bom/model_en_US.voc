@@ -1,0 +1,17 @@
+# Vocabulary Properties
+uuid = bf587507-c740-4b8a-9b35-7dab1d164650
+
+# packageHL.HomeLoan
+packageHL.HomeLoan#concept.label = home loan
+packageHL.HomeLoan.approvedLoanAmount#phrase.action = set the approved loan amount of {this} to {approved loan amount}
+packageHL.HomeLoan.approvedLoanAmount#phrase.navigation = {approved loan amount} of {this}
+packageHL.HomeLoan.cibilScore#phrase.action = set the cibil score of {this} to {cibil score}
+packageHL.HomeLoan.cibilScore#phrase.navigation = {cibil score} of {this}
+packageHL.HomeLoan.existingLoan#phrase.action = make it {existing loan} that {this} is existing loan
+packageHL.HomeLoan.existingLoan#phrase.navigation = {this} is existing loan
+packageHL.HomeLoan.loanApproved#phrase.action = make it {loan approved} that {this} is loan approved
+packageHL.HomeLoan.loanApproved#phrase.navigation = {this} is loan approved
+packageHL.HomeLoan.loanType#phrase.action = set the loan type of {this} to {loan type}
+packageHL.HomeLoan.loanType#phrase.navigation = {loan type} of {this}
+packageHL.HomeLoan.requestedLoanAmount#phrase.action = set the requested loan amount of {this} to {requested loan amount}
+packageHL.HomeLoan.requestedLoanAmount#phrase.navigation = {requested loan amount} of {this}

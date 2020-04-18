@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>HLVariableSet</name>
+  <uuid>8902eb19-8aaa-4760-92d1-0e4b52fb0c04</uuid>
+  <variables name="homeLoan" type="packageHL.HomeLoan" initialValue="" verbalization="HOME LOAN"/>
+</ilog.rules.studio.model.base:VariableSet>
