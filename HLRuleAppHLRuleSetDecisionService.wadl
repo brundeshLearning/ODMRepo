@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><application xmlns="http://wadl.dev.java.net/2009/02" xmlns:param="http://www.ibm.com/rules/decisionservice/HLRuleApp/HLRuleSet/param" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://wadl.dev.java.net/2009/02 wadl.xsd">
+  <doc title="HLRuleSet"/>
+  <grammars>
+    <xs:schema xmlns:xom1="http://www.ibm.com/rules/decisionservice/HLRuleApp/HLRuleSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.ibm.com/rules/decisionservice/HLRuleApp/HLRuleSet" version="1.0">
+      <xsd:import namespace="http://www.ibm.com/rules/decisionservice/HLRuleApp/HLRuleSet"/>
+
+  <xs:complexType name="homeLoan">
+    <xs:sequence>
+      <xs:element name="approvedLoanAmount" type="xs:int"/>
+      <xs:element name="cibilScore" type="xs:int"/>
+      <xs:element name="existingLoan" type="xs:boolean"/>
+      <xs:element name="loanApproved" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="loanType" type="xs:string"/>
+      <xs:element name="requestedLoanAmount" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" name="DecisionID" type="xsd:string"/>
+            <xsd:element maxOccurs="1" minOccurs="0" name="homeLoan" type="xom1:homeLoan"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="DecisionID" type="xsd:string"/>
+            <xsd:element maxOccurs="1" minOccurs="0" name="homeLoan" type="xom1:homeLoan"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xs:schema>
+  </grammars>
+  <resources base="http://localhost:9090/DecisionService/rest/v1/HLRuleApp/HLRuleSet">
+    <resource path="">
+      <method name="POST">
+        <doc title="execute"/>
+        <request>
+          <param default="application/xml" name="Accept" repeating="false" required="false" style="header">
+            <option value="application/xml"/>
+          </param>
+          <param default="application/xml" name="accept" repeating="false" required="false" style="query">
+            <option value="application/xml"/>
+          </param>
+          <param default="en" name="Accept-Language" repeating="false" required="false" style="header">
+            <option value="de"/>
+            <option value="en"/>
+            <option value="es"/>
+            <option value="fr"/>
+            <option value="it"/>
+            <option value="ja"/>
+            <option value="ko"/>
+            <option value="nl"/>
+            <option value="pl"/>
+            <option value="pt_BR"/>
+            <option value="ru"/>
+            <option value="sv"/>
+            <option value="zh_TW"/>
+            <option value="zh"/>
+          </param>
+          <param default="en" name="accept-language" repeating="false" required="false" style="query">
+            <option value="de"/>
+            <option value="en"/>
+            <option value="es"/>
+            <option value="fr"/>
+            <option value="it"/>
+            <option value="ja"/>
+            <option value="ko"/>
+            <option value="nl"/>
+            <option value="pl"/>
+            <option value="pt_BR"/>
+            <option value="ru"/>
+            <option value="sv"/>
+            <option value="zh_TW"/>
+            <option value="zh"/>
+          </param>
+          <param name="Content-Type" repeating="false" required="false" style="header">
+            <option value="application/xml"/>
+          </param>
+          <representation element="param:Request" mediaType="application/xml"/>
+        </request>
+        <response>
+          <representation element="param:Response" mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="/xml">
+      <method name="GET">
+        <doc title="XML generation"/>
+        <response>
+          <representation element="param:Request" mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="/validate">
+      <method name="POST">
+        <doc title="Payload preemptive validation"/>
+        <request>
+          <param default="application/xml" name="Accept" repeating="false" required="false" style="header">
+            <option value="application/xml"/>
+          </param>
+          <param default="application/xml" name="accept" repeating="false" required="false" style="query">
+            <option value="application/xml"/>
+          </param>
+          <param default="en" name="Accept-Language" repeating="false" required="false" style="header">
+            <option value="de"/>
+            <option value="en"/>
+            <option value="es"/>
+            <option value="fr"/>
+            <option value="it"/>
+            <option value="ja"/>
+            <option value="ko"/>
+            <option value="nl"/>
+            <option value="pl"/>
+            <option value="pt_BR"/>
+            <option value="ru"/>
+            <option value="sv"/>
+            <option value="zh_TW"/>
+            <option value="zh"/>
+          </param>
+          <param default="en" name="accept-language" repeating="false" required="false" style="query">
+            <option value="de"/>
+            <option value="en"/>
+            <option value="es"/>
+            <option value="fr"/>
+            <option value="it"/>
+            <option value="ja"/>
+            <option value="ko"/>
+            <option value="nl"/>
+            <option value="pl"/>
+            <option value="pt_BR"/>
+            <option value="ru"/>
+            <option value="sv"/>
+            <option value="zh_TW"/>
+            <option value="zh"/>
+          </param>
+          <param name="Content-Type" repeating="false" required="false" style="header">
+            <option value="application/xml"/>
+          </param>
+          <representation element="param:Request" mediaType="application/xml"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>
